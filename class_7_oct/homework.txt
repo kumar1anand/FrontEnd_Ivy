@@ -1,0 +1,50 @@
+1. group Retail Companies,
+
+const ages = [33, 12, 20, 16, 5, 54, 21, 44, 61, 13, 15, 45, 25, 64, 32];
+const companies= [
+    {name: "Company One", category: "Finance", start: 1981, end: 2004},
+    {name: "Company Two", category: "Retail", start: 1992, end: 2008},
+    {name: "Company Three", category: "Auto", start: 1999, end: 2007},
+    {name: "Company Four", category: "Retail", start: 1989, end: 2010},
+    {name: "Company Five", category: "Technology", start: 2009, end: 2014},
+    {name: "Company Six", category: "Finance", start: 1987, end: 2010},
+    {name: "Company Seven", category: "Auto", start: 1986, end: 1996},
+    {name: "Company Eight", category: "Technology", start: 2011, end: 2016},
+    {name: "Company Nine", category: "Retail", start: 1981, end: 1989}
+  ];
+ 
+//console.log("Anand");
+const arr= companies.filter(function(Company){
+    if(Company.category=="Retail")
+    return true;
+})
+console.log(arr);
+   
+-----------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------
+
+2. group 80's companies,
+3.companies that lasted for 10years or more,
+4.map ages*20, 
+5.sort ages both accending and decending order 
+6.get total years for all comapnies
+const ages = [33, 12, 20, 16, 5, 54, 21, 44, 61, 13, 15, 45, 25, 64, 32];
+
+const ages = [33, 12, 20, 16, 5, 54, 21, 
+const companies= [
+    {name: "Company One", category: "Finance", start: 1981, end: 2004},
+    {name: "Company Two", category: "Retail", start: 1992, end: 2008},
+    {name: "Company Three", category: "Auto", start: 1999, end: 2007},
+    {name: "Company Four", category: "Retail", start: 1989, end: 2010},
+    {name: "Company Five", category: "Technology", start: 2009, end: 2014},
+    {name: "Company Six", category: "Finance", start: 1987, end: 2010},
+    {name: "Company Seven", category: "Auto", start: 1986, end: 1996},
+    {name: "Company Eight", category: "Technology", start: 2011, end: 2016},
+    {name: "Company Nine", category: "Retail", start: 1981, end: 1989}
+  ];
+
+
+(a,b)=a-b ====> Asscending
+
+b-a =====> Descending 
+
