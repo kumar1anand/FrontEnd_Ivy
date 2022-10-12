@@ -131,137 +131,99 @@ function removeChocolates(number,chocolates){
 
 
 
-//Progression 3: One is not enough!===> dispenseChocolates()// Comment
+//Progression 3: One is not enough!===> dispenseChocolates()
 
 
 function dispenseChocolates(number,chocolates){
   var Newarr = new Array(number);
   for(var i=0;i<number;i++){
-    arr1[i] = chocolates.pop();
+    Newarr[i] = chocolates.pop();
   }
-  return arr1;
+  return Newarr;
 }
 
-//Progression 4: Dispense ___ chocolates of ____ color
+//Progression 4: My favourite color is...==> dispenseChocolatesOfColor()
+
 function dispenseChocolatesOfColor(chocolates,number, color){
-  var arr2 = new Array();
-   for(var ele in chocolates){
-      if(ele == color){
-         arr2.push(ele);
-      }
-      if(arr2.length == number) break;
-   }
-   return arr2;
-}
-
-//Progression 5: Display ___ chocolates of each color. Return array of numbers [green, silver, blue, crimson, purple, red, pink]
-// Return array of number of chocolates [green, silver, blue, crimson, purple, red, pink]
-// Return [1] when called with a single-color array ['green']
-// Return [1,2] when called with ['green','red','red']
-// Return [] when called with an empty array
-function noOfChocolates(){
-  var c_green=0;
-  var c_red=0;
-  var c_purple=0;
-  var c_blue=0;
-  var c_crimson=0;
-  var c_silver=0;
-  var c_pink=0;
-    
-    if(chocolates.length==1) return 1;
-    else{
-        for(var i in chocolates){
-            if(chocolates[i]=="green") c_green++;
-            else if(chocolates[i]=="red") c_red++;
-            else if(chocolates[i]=="purple") c_purple++;
-            else  if(chocolates[i]=="blue") c_blue++;
-            else if(chocolates[i]=="crimson") c_crimson++;
-            else if(chocolates[i]=="silver") c_silver++;
-            else if(chocolates[i]=="pink") c_pink++;
-       }
-    }
-    
-    var arr = new Array();
-   
-    if(c_green!=0)  arr.push(c_green);
-    if(c_silver!=0) arr.push(c_silver);
-    if(c_blue!=0) arr.push(c_blue);
-    if(c_crimson!=0) arr.push(c_crimson);
-    if(c_purple!=0) arr.push(c_purple);
-    if(c_red!=0)  arr.push(c_red);
-    if(c_pink) arr.push(c_pink);
-    
-   
-    return arr;
-}
-
-//Progression 6: Sort chocolates based on count in each color. Return array of colors
-function sortChocolateBasedOnCount(){
-//green,red , purple, blue, crimson, silver, pink
-      var m = {};
-      for (var i=0;i<chocolates.length;i++) {
-          m[str[i]] = 0;
+  var Newarr = new Array();
+   for(var i in chocolates){
+      if(i != color){
+         Newarr.push(i);
       }
       
-      // Loop to store the frequency
-      // of a string in a hash-map
-      for (var i=0;i<chocolates.length;i++) {
-          m[str[i]]++;
-      }
-
-      // Iterator for the map
-      var vec = new Array(chocolates.length);
-      for (var i=0;i<chocolates.length;i++) {
-          vec[i] = [];
-      }
-
-      var k = 0
-      for (var it in m) {
-          vec[k] = [m[it], it];
-          k += 1;
-      }
-      vec.sort(cmp);
-
-      function cmp(x, y)
-      {
-          if (x[0] < y[0]) {
-              return -1;
-          } 
-          else if (x[0] > y[0]) {
-            return 1;
-          }
-          else if (x[0] === y[0])
-          {
-            if (x[1] < y[1]) {
-              return 1;
-          }
-          else {
-              return -1;
-          }
-        }
-      }
-   var arr = new Array();
-
-   for (var i = 0; i < k; i++) {
-        arr.push(vec[i][1]+", ");
-     }
-  return arr;
+   }
+   return Newarr;
 }
 
-//Progression 7: Change ___ chocolates of ____ color to ____ color
+//Progression 5: LED my chocos!==> noOfChocolates()
+
+function noOfChocolates(chocolate){
+    var Number_Of_chocolates = new Array();
+    for(var i in chocolates){
+            if(chocolates[i]=="green") c1++;
+            else if(chocolates[i]=="silver") c2++;
+            else if(chocolates[i]=="blue") c3++;
+            else  if(chocolates[i]=="crimson") c4++;
+            else if(chocolates[i]=="purple") c5++;
+            else if(chocolates[i]=="red") c6++;
+            else if(chocolates[i]=="pink") c7++;
+       }
+    
+    Number_Of_chocolates.push(c1); 
+    Number_Of_chocolates.push(c2); 
+    Number_Of_chocolates.push(c3);
+    Number_Of_chocolates.push(c4);
+    Number_Of_chocolates.push(c5);
+    Number_Of_chocolates.push(c6);
+    Number_Of_chocolates.push(c7);
+    return Number_Of_chocolates;
+ }
+
+//Progression 6: Let's stack em up!====> sortChocolateBasedOnCount()
+
+
+function sortChocolateBasedOnCount(chocolate){
+
+var Number_Of_chocolates = new Array();
+for(var i in chocolates){
+        if(chocolates[i]=="green") c1++;
+        else if(chocolates[i]=="silver") c2++;
+        else if(chocolates[i]=="blue") c3++;
+        else  if(chocolates[i]=="crimson") c4++;
+        else if(chocolates[i]=="purple") c5++;
+        else if(chocolates[i]=="red") c6++;
+        else if(chocolates[i]=="pink") c7++;
+   }
+
+Number_Of_chocolates.push(c1); 
+Number_Of_chocolates.push(c2); 
+Number_Of_chocolates.push(c3);
+Number_Of_chocolates.push(c4);
+Number_Of_chocolates.push(c5);
+Number_Of_chocolates.push(c6);
+Number_Of_chocolates.push(c7);
+
+Number_Of_chocolates.sort();
+Number_Of_chocolates.reverse();
+  
+}
+
+//Progression 7: They taste the same!===> changeChocolateColor()
+
 function changeChocolateColor(chocolates,number, color, finalColor){
-    for(var x in chocolates){
-      var cnt = 0;
-      if(cnt == number) break;
+    for(var i=0;i<number;i++){
       if(chocolates[x] == color){
       chocolates[x] = finalColor;
        cnt++;
       }
+    }
 
     }
-}
 
-//Progression 8: Change all chocolates of ____ color to ____ color and return [countOfChangedColor, chocolates]
+
+//Progression 8: Convert these heretics!===> changeChocolateColorAllOfxCount()
+
+
 function changeChocolateColorAllOfxCount(chocolates,color, finalColor){
   for(var x in chocolates){
     if(chocolates[x] == color)
@@ -269,37 +231,60 @@ function changeChocolateColorAllOfxCount(chocolates,color, finalColor){
   }
 }
 
-//Challenge 1: Remove one chocolate of ____ color from the top
+//Challenge 1: Fresh pickings! ===> removeChocolateOfColor()
+
 function removeChocolateOfColor(color){
-  for(var x in chocolates){
-    var cnt=0
-    if(cnt==1) break;
-    if(chocolates[x]==color)
-    chocolates.shift();
+  for(var x in chocolates){  
+    if(x==color)
+    chocolates.pop();
   }
 }
 
-//Challenge 2: Dispense 1 rainbow colored colored chocolate for every 3 chocolates of the same color dispensed
+//Challenge 2: Rainbows and sunshine! ===> dispenseRainbowChocolates()
+
 function dispenseRainbowChocolates(number){
-  var c_green=0;
-  var c_red=0;
-  var c_purple=0;
-  var c_blue=0;
-  var c_crimson=0;
-  var c_silver=0;
-  var c_pink=0;
-    
+  var c1=c2=c3=c4=c5=c6=c7=0;   
+  var ranbow_chocolate=0; 
     if(chocolates.length==1) return 0;
     else{
-        for(var i in chocolates){
-            if(chocolates[i]=="green") c_green++;
-            else if(chocolates[i]=="red") c_red++;
-            else if(chocolates[i]=="purple") c_purple++;
-            else  if(chocolates[i]=="blue") c_blue++;
-            else if(chocolates[i]=="crimson") c_crimson++;
-            else if(chocolates[i]=="silver") c_silver++;
-            else if(chocolates[i]=="pink") c_pink++;
+        for(var i=0;i<number;i++){
+            if(chocolates[i]=="green") c1++;
+            else if(chocolates[i]=="red") c2++;
+            else if(chocolates[i]=="purple") c3++;
+            else  if(chocolates[i]=="blue") c4++;
+            else if(chocolates[i]=="crimson") c5++;
+            else if(chocolates[i]=="silver") c6++;
+            else if(chocolates[i]=="pink") c7++;
+       }
+       while(c1>=3){
+        ranbow_chocolate++;
+        c1=c1-3;
+       }
+       while(c2>=3){
+        ranbow_chocolate++;
+        c2=c2-3;
+       }
+       while(c3>=3){
+        ranbow_chocolate++;
+        c3=c3-3;
+       }
+       while(c4>=3){
+        ranbow_chocolate++;
+        c4=c4-3;
+       }
+       while(c5>=3){
+        ranbow_chocolate++;
+        c5=c5-3;
+       }
+       while(c6>=3){
+        ranbow_chocolate++;
+        c6=c6-3;
+       }
+       while(c7>=3){
+        ranbow_chocolate++;
+        c7=c7-3;
        }
     }
-   return (c_green/3 + c_red/3 +c_purple/3 + c_blue/3 + c_crimson/3 + c_silver/3 + c_pink/3);
+    return ranbow_chocolate;
+  
 }
