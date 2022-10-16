@@ -1,0 +1,36 @@
+.t1{
+    border: 2px solid;
+    width: 500px;
+    height: 550px;
+    margin: auto;
+}
+.t2{
+    margin: 100px;
+}
+.t1>h1{
+    margin-top: 1px;
+    background-color: aqua;
+}
+h2{
+    background-color: blanchedalmond;
+}
+#b{
+    margin-left: 100px;
+    size: 50px;
+    background-color: chartreuse;
+}
+button{
+    width: 100%;
+}
+#l{
+    margin-right: 28px;
+}
+#l2{
+    margin-right: 22px;
+}
+#bt{
+    background-color: chartreuse;
+}
+h1{
+    background-color: aqua;
+}
