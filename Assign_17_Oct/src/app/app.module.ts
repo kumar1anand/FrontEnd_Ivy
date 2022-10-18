@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import {MatSidenavModule} from '@angular/material/sidenav';
+import { UsersModule } from './users/users.module';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -16,7 +17,8 @@ import { LayoutModule } from './layout/layout.module';
     LayoutModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MatSidenavModule
+    MatSidenavModule,
+    UsersModule
   ],
   providers: [],
   bootstrap: [AppComponent]

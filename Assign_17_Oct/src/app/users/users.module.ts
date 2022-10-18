@@ -1,15 +1,17 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ListUsersComponent } from './list-users/list-users.component';
-
-
+import {MatCardModule} from '@angular/material/card';
+import {MatDividerModule} from '@angular/material/divider';
 
 @NgModule({
   declarations: [
     ListUsersComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    MatCardModule,
+    MatDividerModule
   ],
   exports:[
     ListUsersComponent
