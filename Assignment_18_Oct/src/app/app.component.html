@@ -1,0 +1,61 @@
+<h1>EVENT BINDING</h1>
+<button (click)="Greet1()">Greet</button>
+<br>
+<br>
+<button (click)="Greet2($event)">GreetPara</button>
+<br>
+<br>
+<button (click)="Greet3($event)">GreetEventType</button>
+<br>
+<br>
+
+
+
+<h1>All Directives</h1>
+<h2>ngFor</h2>
+<div *ngFor="let n of numbers">{{n}}</div>
+
+<h2>ngIf</h2>
+<div *ngFor="let n of numbers">
+  <div *ngIf="n*3==33">{{n}}</div>
+</div>
+
+<h2>ngSwitch</h2>
+<div *ngFor="let n of numbers">
+<div [ngSwitch]='n'>
+    <div *ngSwitchCase="11">The number is 11</div>
+    <div *ngSwitchCase="12">The number is 12</div> 
+    <div *ngSwitchCase="13">The number is 13</div>
+    <div *ngSwitchCase="14">The number is 14</div>
+    <div *ngSwitchDefault>Not Available</div>
+  </div>
+</div>
+
+<!-- name:any="This is pipeline Example";
+num:any=101.029302032;
+today=Date();
+nump:any=0.211321 -->
+
+<h1>pipes application</h1>
+
+<h3>UPPERCASE</h3>
+<p>{{name|uppercase}}</p>
+
+<h3>lowercasae</h3>
+<p>{{name|lowercase}}</p>
+
+<h3>DATE</h3>
+
+<p>{{today|date}}</p>
+
+<h3>Indian Currency</h3>
+<p>{{num|currency:'INR'}}</p>
+
+<h3>Number pipes</h3>
+<p>{{num|number:'4.1-4'}}</p>
+
+
+<p>{{nump|percent}}</p>
+
+
+<p>{{nump|percent:'2.1-4'}}</p>
